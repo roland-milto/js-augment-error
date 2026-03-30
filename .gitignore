@@ -1,0 +1,68 @@
+# Make sure this file is compatible with .npmignore
+
+# TypeScript build output
+build/
+dist/
+
+# Node.js dependencies
+node_modules/
+
+# Scripts
+# prebuild/
+
+# Documentation (need to be published)
+# /docs
+# /documentation
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Examples (need to be published)
+# /example
+# /examples
+# /demo
+
+# IDE configuration
+.idea/
+.vscode/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+cache/
+tmp/
+temporary/
+*.tmp
+*.temp
+
+# Tests (need to be published)
+# /coverage
+# *.lcov
+# /test
+# /tests
+# /__tests__
+# *.spec.*
+# *.test.*
+
+# Special files (need to be published)
+# .gitignore
+# .gitmodules
+# .npmignore
+package-lock.json
+
+# Other (need to be published)
+*.tsbuildinfo
+# *.map
+# Jenkinsfile
+# Makefile

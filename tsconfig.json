@@ -1,0 +1,292 @@
+{
+  "compilerOptions":
+  {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /**
+     * Projects
+     */
+    // 2025-12-19: Enable constraints that allow a TypeScript project to be used with project references.
+    "composite": true,
+
+    // Reduce the number of projects loaded automatically by TypeScript.
+    // "disableReferencedProjectLoad": true,
+
+    // 2025-12-19: Opt a project out of multi-project reference checking when editing.
+    "disableSolutionSearching": false,
+
+    // Disable preferring source files instead of declaration files when referencing composite projects.
+    // "disableSourceOfProjectReferenceRedirect": true,
+
+    // 2025-12-19: Enable incremental compilation.
+    "incremental": true,
+
+    // Specify the folder for .tsbuildinfo incremental compilation files.
+    "tsBuildInfoFile": ".tsbuildinfo",
+
+    /**
+     * Language and Environment
+     */
+    // 19.12.2025: Set the JavaScript language version for emitted JavaScript and include compatible library declarations (https://www.typescriptlang.org/tsconfig/#target).
+    "target": "ES2023",
+
+    // 2025-12-19: Specify a set of bundled library declaration files that describe the target runtime environment.
+    "lib": [
+      "ES2023",
+      "DOM"
+    ],
+
+    // Disable including any library files, including the default lib.d.ts.
+    "noLib": false,
+
+    // 2025-12-19: Enable experimental support for TC39 stage 2 draft decorators.
+    "experimentalDecorators": false,
+
+    // Emit design-type metadata for decorated declarations in source files.
+    // "emitDecoratorMetadata": true,
+
+    // Emit ECMAScript-standard-compliant class fields (https://www.typescriptlang.org/tsconfig/#useDefineForClassFields)
+    // "useDefineForClassFields": "ESNext",
+
+    /**
+     * Modules
+     */
+    // 2025-12-19: Specify the root folder within your source files.
+    "rootDir": "./src",
+
+    // Allow multiple folders to be treated as one when resolving modules.
+    // "rootDirs": [],
+
+    // 2025-12-19: Specify the base directory to resolve non-relative module names.
+    "baseUrl": "./",
+
+    // Specify a set of entries that re-map imports to additional lookup locations.
+    // "paths": {},
+
+    // 2025-06-24: Specify multiple folders that act like `./node_modules/@DataTypes`.
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+
+    // 2025-07-16: Specify what module code is generated.
+    "module": "NodeNext",
+
+    // 2025-07-16: Specify how TypeScript looks up a file from a given module specifier.
+    "moduleResolution": "NodeNext",
+
+    // 2025-12-22: Allow importing TypeScript files with a .ts extension when `allowJs` is enabled.
+    "allowImportingTsExtensions": false,
+
+    // Allow accessing UMD globals from modules.
+    // "allowUmdGlobalAccess": true,
+
+    // 2024-07-30: Enable importing .json files.
+    "resolveJsonModule": true,
+
+    // Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project.
+    // "noResolve": true,
+
+    // 2025-12-19: Only packages listed will be included in the global scope.
+    "types": [
+      "node"
+    ],
+
+    /**
+     * JavaScript Support
+     */
+    // 2025-07-16: Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files.
+    "allowJs": true,
+
+    // 2025-07-16: Enable error reporting in type-checked JavaScript files.
+    "checkJs": true,
+
+    // Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`.
+    // "maxNodeModuleJsDepth": 1,
+
+    /**
+     * Handle / create TypeScript files
+     */
+    // 2025-12-19: Generate .d.ts files from TypeScript and JavaScript files in your project. Only necessary for type-checking in JavaScript files (export as puplic npm-module).
+    "declaration": true,
+
+    // 2025-12-19: Create sourcemaps for d.ts files. Only applicable if `declaration` is true. Only necessary for type-checking JavaScript files (export as puplic npm-module).
+    "declarationMap": true,
+
+    // 21.06.2024: Only output d.ts files and not JavaScript files.
+    "emitDeclarationOnly": false,
+
+    // 01.06.2024: Skip type checking .d.ts files that are included with TypeScript.
+    "skipDefaultLibCheck": true,
+
+    // 01.06.2024: Skip type-checking all .d.ts files
+    "skipLibCheck": true,
+
+    // 21.06.2024: Create source map files for emitted JavaScript files.
+    "sourceMap": true,
+
+    // Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output.
+    // "outFile": "./",
+
+    // 2025-12-19: Specify an output folder for all emitted files.
+    "outDir": "./dist",
+
+    // 2025-12-23: Disable emitting comments. Should be always set to false for libraries (npm).
+    "removeComments": false,
+
+    // Disable emitting files from a compilation.
+    // "noEmit": true,
+
+    // Allow importing helper functions from tslib once per project, instead of including them per-file.
+    // "importHelpers": true,
+
+    // Specify emit/checking behavior for imports that are only used for DataTypes.
+    // "importsNotUsedAsValues": "remove",
+
+    // Emit more compliant, but verbose and less performant JavaScript for iteration.
+    // "downlevelIteration": true,
+
+    // Specify the root path for debuggers to find the reference source code.
+    // "sourceRoot": "",
+
+    // Specify the location where debugger should locate map files instead of generated locations.
+    // "mapRoot": "",
+
+    // Include sourcemap files inside the emitted JavaScript.
+    // "inlineSourceMap": true,
+
+    // Include source code in the sourcemaps inside the emitted JavaScript.
+    // "inlineSources": true,
+
+    // Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
+    // "emitBOM": true,
+
+    // Set the newline character for emitting files.
+    // "newLine": "crlf",
+
+    // Disable emitting declarations that have `@internal` in their JSDoc comments.
+    // "stripInternal": true,
+
+    // Disable generating custom helper functions like `__extends` in compiled output.
+    // "noEmitHelpers": true,
+
+    // Disable emitting files if any type-checking errors are reported.
+    // "noEmitOnError": true,
+
+    // Disable erasing `const enum` declarations in generated code.
+    "preserveConstEnums": true,
+
+    // Specify the output directory for generated declaration files.
+    // "declarationDir": "./",
+
+    // 2025-12-19: Prevents unused imports from being removed if side effects are necessary.
+    "preserveValueImports": false,
+
+    /**
+     * Interop Constraints
+     */
+    // 2025-12-08: Ensure that each file can be safely transpiled without relying on other imports.
+    // If you use ts-node or Babel, set it to true.
+    "isolatedModules": false,
+
+    // 30.07.2024: Automatically enabled when esModuleInterop is activated. Allow 'import x from y' when a module doesn't have a default export.
+    "allowSyntheticDefaultImports": true,
+
+    // 30.07.2024: Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility.
+    "esModuleInterop": true,
+
+    // Disable resolving symlinks to their realpath. This correlates to the same flag in node.
+    // "preserveSymlinks": true,
+
+    // 2025-12-19: Ensure that casing is correct in imports.
+    "forceConsistentCasingInFileNames": true,
+
+    /**
+     * Type Checking
+     */
+    // 2025-12-08: Enable all strict type-checking options.
+    "strict": true,
+
+    // 2024-01-02: Enable error reporting for expressions and declarations with an implied `any` type.
+    "noImplicitAny": true,
+
+    // 2024-01-02: When type checking, take into account `null` and `undefined`. When enabled, TypeScript requires values to be set unless undefined is explicitly added to the type.
+    "strictNullChecks": true,
+
+    // 2025-12-08: When assigning functions, check to ensure parameters and the return values are subtype-compatible.
+    "strictFunctionTypes": true,
+
+    // 2025-12-19: Check that the arguments for `bind`, `call`, and `apply` methods match the original function.
+    "strictBindCallApply": true,
+
+    // 2025-12-19: Check for class properties that are declared but not set in the constructor.
+    "strictPropertyInitialization": false,
+
+    // 2025-12-19: Enable error reporting when `this` is given the type `any`.
+    "noImplicitThis": true,
+
+    // 2025-12-19: Enable error reporting when a local variable isn't read.
+    "noUnusedLocals": true,
+
+    // 2025-12-19: Raise an error when a function parameter isn't read.
+    "noUnusedParameters": true,
+
+    // 2025-12-19: Interpret optional property DataTypes as written, rather than adding 'undefined'.
+    "exactOptionalPropertyTypes": true,
+
+    // 2025-12-19: Enable error reporting for code paths that do not explicitly return in a function.
+    "noImplicitReturns": true,
+
+    // 2025-12-19: Include 'undefined' in index signature results.
+    "noUncheckedIndexedAccess": true,
+
+    // 2025-12-08: Ensure overriding members in derived classes are marked with an override modifier.
+    "noImplicitOverride": true,
+
+    // 2025-12-19: Enforces using indexed accessors for keys declared using an indexed type
+    "noPropertyAccessFromIndexSignature": true,
+
+    // 2025-06-04: Ensure 'use strict' is always emitted.
+    "alwaysStrict": true,
+
+    // 2025-07-16: Disable error reporting for unused labels.
+    "allowUnusedLabels": false,
+
+    // 2025-07-16: Disable error reporting for unreachable code.
+    "allowUnreachableCode": false,
+
+    // 2025-12-08: Enable error reporting for fallthrough cases in switch statements.
+    "noFallthroughCasesInSwitch": true,
+
+    // 2025-12-08: Type catch clause variables as 'unknown' instead of 'any'.
+    "useUnknownInCatchVariables": true
+
+    /**
+     * React / JSX
+     */
+    // Specify what JSX code is generated.
+    // "jsx": "preserve",
+
+    // Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'
+    // "jsxFactory": "",
+
+    // Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'.
+    // "jsxFragmentFactory": "",
+
+    // Specify the module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.`
+    // "jsxImportSource": "",
+
+    // Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit.
+    // "reactNamespace": "",
+  },
+  "ts-node": {
+    // "esm": true
+    // "experimentalSpecifierResolution": "node"
+  },
+  "include": [
+    "src",
+    "../log/src/data/lang/*.json",
+    "src/**/*.ts",
+	  "prebuild/**/*.ts"
+  ]
+}

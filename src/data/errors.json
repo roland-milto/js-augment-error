@@ -1,0 +1,546 @@
+{
+	"ApiInvalidRequestError": {
+		"code": 400,
+		"severity": "error",
+		"target": "api",
+		"reason": "request",
+		"message": "Invalid API request.",
+		"comment": "Thrown when an API request is malformed or contains invalid parameters."
+	},
+	"ApiMethodNotAllowedError": {
+		"code": 405,
+		"severity": "error",
+		"target": "api",
+		"reason": "request",
+		"message": "The API method is not allowed.",
+		"comment": "Thrown when the API endpoint does not support the requested HTTP method."
+	},
+	"ApiNotFoundError": {
+		"code": 404,
+		"severity": "error",
+		"target": "api",
+		"reason": "notFound",
+		"message": "API resource not found.",
+		"comment": "Thrown when the requested API endpoint or resource does not exist."
+	},
+	"ApiRateLimitError": {
+		"code": 429,
+		"severity": "error",
+		"target": "api",
+		"reason": "limit",
+		"message": "API rate limit exceeded.",
+		"comment": "Thrown when the API request rate limit has been exceeded."
+	},
+	"ApiVersionError": {
+		"code": 400,
+		"severity": "error",
+		"target": "api",
+		"reason": "request",
+		"message": "Invalid API version.",
+		"comment": "Thrown when the requested API version is invalid or unsupported."
+	},
+
+	"AssertionError": {
+		"code": 500,
+		"severity": "error",
+		"target": "other",
+		"reason": "assertion",
+		"message": "Assertion failed.",
+		"comment": "Thrown when an assertion in the code fails."
+	},
+
+	"AuthForbiddenError": {
+		"code": 403,
+		"severity": "error",
+		"target": "auth",
+		"reason": "forbidden",
+		"message": "Access is forbidden.",
+		"comment": "Thrown when access to a resource is explicitly forbidden."
+	},
+	"AuthPermissionError": {
+		"code": 403,
+		"severity": "error",
+		"target": "auth",
+		"reason": "permission",
+		"message": "Permission denied.",
+		"comment": "Thrown when the authenticated user lacks the required permissions."
+	},
+	"AuthSessionExpiredError": {
+		"code": 401,
+		"severity": "error",
+		"target": "auth",
+		"reason": "unauthorized",
+		"message": "Authentication session expired.",
+		"comment": "Thrown when an authentication session has expired and re-authentication is required."
+	},
+	"AuthUnauthorizedError": {
+		"code": 401,
+		"severity": "error",
+		"target": "auth",
+		"reason": "unauthorized",
+		"message": "Authentication required.",
+		"comment": "Thrown when authentication is required but missing or invalid."
+	},
+
+	"DatabaseConnectionError": {
+		"code": 503,
+		"severity": "error",
+		"target": "database",
+		"reason": "connection",
+		"message": "Database connection failed.",
+		"comment": "Thrown when a connection to the database cannot be established."
+	},
+	"DatabaseDisconnectionError": {
+		"code": 503,
+		"severity": "error",
+		"target": "database",
+		"reason": "connection",
+		"message": "Database connection was lost.",
+		"comment": "Thrown when an existing database connection is unexpectedly lost."
+	},
+	"DatabaseQueryError": {
+		"code": 503,
+		"severity": "error",
+		"target": "database",
+		"reason": "query",
+		"message": "Database query failed.",
+		"comment": "Thrown when a database query fails during execution."
+	},
+	"DatabaseTimeoutError": {
+		"code": 503,
+		"severity": "error",
+		"target": "database",
+		"reason": "timeout",
+		"message": "Database operation timed out.",
+		"comment": "Thrown when a database operation exceeds the allowed time limit."
+	},
+
+	"DirectoryAlreadyExistsError": {
+		"code": 409,
+		"severity": "error",
+		"target": "directory",
+		"reason": "exists",
+		"message": "Directory already exists.",
+		"comment": "Thrown when attempting to create a directory that already exists."
+	},
+	"DirectoryCreationError": {
+		"code": 409,
+		"severity": "error",
+		"target": "directory",
+		"reason": "operation",
+		"message": "Directory creation failed.",
+		"comment": "Thrown when a directory cannot be created due to an operation failure."
+	},
+	"DirectoryDeletionError": {
+		"code": 409,
+		"severity": "error",
+		"target": "directory",
+		"reason": "operation",
+		"message": "Directory deletion failed.",
+		"comment": "Thrown when deleting a directory fails during the operation."
+	},
+	"DirectoryEmptyError": {
+		"code": 400,
+		"severity": "error",
+		"target": "directory",
+		"reason": "content",
+		"message": "Directory is empty.",
+		"comment": "Thrown when a directory is unexpectedly empty."
+	},
+	"DirectoryExpectedError": {
+		"code": 422,
+		"severity": "error",
+		"target": "directory",
+		"reason": "expected",
+		"message": "Directory was expected.",
+		"comment": "Thrown when a directory was expected but not provided or found."
+	},
+	"DirectoryNotEmptyError": {
+		"code": 409,
+		"severity": "error",
+		"target": "directory",
+		"reason": "content",
+		"message": "Directory is not empty.",
+		"comment": "Thrown when a directory is expected to be empty but contains files or subdirectories."
+	},
+	"DirectoryNotFoundError": {
+		"code": 404,
+		"severity": "error",
+		"target": "directory",
+		"reason": "notFound",
+		"message": "Directory not found.",
+		"comment": "Thrown when a requested directory cannot be found."
+	},
+	"DirectoryPathFormatError": {
+		"code": 400,
+		"severity": "error",
+		"target": "directory",
+		"reason": "format",
+		"message": "Directory path format is invalid.",
+		"comment": "Thrown when a directory path does not match the expected format."
+	},
+	"DirectoryPermissionError": {
+		"code": 403,
+		"severity": "error",
+		"target": "directory",
+		"reason": "permission",
+		"message": "Directory permission denied.",
+		"comment": "Thrown when the current process lacks permission to access or modify a directory."
+	},
+
+	"FileAlreadyExistsError": {
+		"code": 409,
+		"severity": "error",
+		"target": "file",
+		"reason": "exists",
+		"message": "File already exists.",
+		"comment": "Thrown when attempting to create a file that already exists."
+	},
+	"FileCreationError": {
+		"code": 409,
+		"severity": "error",
+		"target": "file",
+		"reason": "operation",
+		"message": "File creation failed.",
+		"comment": "Thrown when a file cannot be created due to an operation failure."
+	},
+	"FileCopyError": {
+		"code": 507,
+		"severity": "error",
+		"target": "file",
+		"reason": "operation",
+		"message": "File copy failed.",
+		"comment": "Thrown when copying a file fails during the operation."
+	},
+	"FileDeletionError": {
+		"code": 409,
+		"severity": "error",
+		"target": "file",
+		"reason": "operation",
+		"message": "File deletion failed.",
+		"comment": "Thrown when deleting a file fails during the operation."
+	},
+	"FileEmptyError": {
+		"code": 400,
+		"severity": "error",
+		"target": "file",
+		"reason": "content",
+		"message": "File is empty.",
+		"comment": "Thrown when a file is unexpectedly empty."
+	},
+	"FileExpectedError": {
+		"code": 422,
+		"severity": "error",
+		"target": "file",
+		"reason": "expected",
+		"message": "File was expected.",
+		"comment": "Thrown when a file was expected but not provided or found."
+	},
+	"FileExtensionError": {
+		"code": 400,
+		"severity": "error",
+		"target": "file",
+		"reason": "format",
+		"message": "File extension is invalid.",
+		"comment": "Thrown when a file has an invalid or unsupported extension or format."
+	},
+	"FileNotFoundError": {
+		"code": 404,
+		"severity": "error",
+		"target": "file",
+		"reason": "notFound",
+		"message": "File not found.",
+		"comment": "Thrown when a requested file cannot be found."
+	},
+	"FilePathFormatError": {
+		"code": 400,
+		"severity": "error",
+		"target": "file",
+		"reason": "format",
+		"message": "File path format is invalid.",
+		"comment": "Thrown when a file path does not match the expected format."
+	},
+	"FilePermissionError": {
+		"code": 403,
+		"severity": "error",
+		"target": "file",
+		"reason": "permission",
+		"message": "File permission denied.",
+		"comment": "Thrown when the current process lacks permission to access or modify a file."
+	},
+	"FileUnreadableError": {
+		"code": 403,
+		"severity": "error",
+		"target": "file",
+		"reason": "operation",
+		"message": "File is unreadable.",
+		"comment": "Thrown when a file cannot be read during an operation."
+	},
+	"FileUnwritableError": {
+		"code": 403,
+		"severity": "error",
+		"target": "file",
+		"reason": "operation",
+		"message": "File is unwritable.",
+		"comment": "Thrown when a file cannot be written during an operation."
+	},
+	"FileSystemLimitError": {
+		"code": 507,
+		"severity": "error",
+		"target": "file",
+		"reason": "system",
+		"message": "File system limits exceeded.",
+		"comment": "Thrown when a file operation fails due to system-level limitations such as disk quotas or file system constraints."
+	},
+
+	"LinkNotFoundError": {
+		"code": 404,
+		"severity": "error",
+		"target": "link",
+		"reason": "notFound",
+		"message": "Link not found.",
+		"comment": "Thrown when a requested link or symbolic link cannot be found."
+	},
+
+	"NetworkAddressInUseError": {
+		"code": 500,
+		"severity": "error",
+		"target": "network",
+		"reason": "used",
+		"message": "Network address is already in use.",
+		"comment": "Thrown when a network address is already in use by another process."
+	},
+	"NetworkConnectionError": {
+		"code": 500,
+		"severity": "error",
+		"target": "network",
+		"reason": "connection",
+		"message": "Network connection failed.",
+		"comment": "Thrown when a network connection cannot be established or fails unexpectedly."
+	},
+	"NetworkHostUnreachableError": {
+		"code": 500,
+		"severity": "error",
+		"target": "network",
+		"reason": "host",
+		"message": "Network host is unreachable.",
+		"comment": "Thrown when the target host cannot be reached over the network."
+	},
+	"NetworkPortInUseError": {
+		"code": 500,
+		"severity": "error",
+		"target": "network",
+		"reason": "used",
+		"message": "Network port is already in use.",
+		"comment": "Thrown when a network port is already in use by another process."
+	},
+
+	"ObjectPropertyMissingError": {
+		"code": 400,
+		"severity": "error",
+		"target": "object",
+		"reason": "property",
+		"message": "Required object property is missing.",
+		"comment": "Thrown when an expected property is missing from an object."
+	},
+
+	"PathTooLongError": {
+		"code": 414,
+		"severity": "error",
+		"target": "path",
+		"reason": "length",
+		"message": "Path is too long.",
+		"comment": "Thrown when a file system path exceeds the maximum allowed length."
+	},
+
+	"ServerConnectionError": {
+		"code": 500,
+		"severity": "error",
+		"target": "server",
+		"reason": "connection",
+		"message": "Server connection failed.",
+		"comment": "Thrown when the server fails to establish or maintain a required connection."
+	},
+	"ServerInputOutputError": {
+		"code": 500,
+		"severity": "error",
+		"target": "server",
+		"reason": "inputOutput",
+		"message": "Server I/O operation failed.",
+		"comment": "Thrown when a server-side input/output operation fails."
+	},
+	"ServerInternalError": {
+		"code": 500,
+		"severity": "error",
+		"target": "server",
+		"reason": "internal",
+		"message": "Internal server error.",
+		"comment": "Thrown when an unexpected internal server error occurs."
+	},
+	"ServerTimeoutError": {
+		"code": 504,
+		"severity": "error",
+		"target": "server",
+		"reason": "timeout",
+		"message": "Server operation timed out.",
+		"comment": "Thrown when a server operation exceeds the allowed time limit."
+	},
+
+	"SymlinkLoopError": {
+		"code": 508,
+		"severity": "critical",
+		"target": "link",
+		"reason": "loop",
+		"message": "Symbolic link loop detected.",
+		"comment": "Thrown when a symbolic link loop is detected during path resolution."
+	},
+
+	"SystemCriticalCpuUsageError": {
+		"code": 507,
+		"severity": "critical",
+		"target": "system",
+		"reason": "hardware",
+		"message": "Critical CPU usage detected.",
+		"comment": "Thrown when CPU usage reaches a critical level that may affect system stability."
+	},
+	"SystemOutOfMemoryError": {
+		"code": 507,
+		"severity": "critical",
+		"target": "system",
+		"reason": "hardware",
+		"message": "System ran out of memory.",
+		"comment": "Thrown when the system runs out of available memory."
+	},
+	"SystemOutOfDiskSpaceError": {
+		"code": 507,
+		"severity": "critical",
+		"target": "system",
+		"reason": "hardware",
+		"message": "System ran out of disk space.",
+		"comment": "Thrown when the system runs out of disk space."
+	},
+	"SystemReadOnlyError": {
+		"code": 503,
+		"severity": "error",
+		"target": "system",
+		"reason": "permission",
+		"message": "System is read-only.",
+		"comment": "Thrown when the system is in read-only mode and write operations are not allowed."
+	},
+	"SystemTooManyFilesOpenError": {
+		"code": 507,
+		"severity": "error",
+		"target": "system",
+		"reason": "connection",
+		"message": "Too many files are open.",
+		"comment": "Thrown when the system exceeds the limit for simultaneously open files."
+	},
+
+	"TokenExpiredError": {
+		"code": 401,
+		"severity": "error",
+		"target": "token",
+		"reason": "expired",
+		"message": "Authentication token expired.",
+		"comment": "Thrown when an authentication token has expired and is no longer valid."
+	},
+	"TokenInvalidError": {
+		"code": 401,
+		"severity": "error",
+		"target": "token",
+		"reason": "invalid",
+		"message": "Authentication token is invalid.",
+		"comment": "Thrown when an authentication token is invalid or malformed."
+	},
+	"TokenMissingError": {
+		"code": 401,
+		"severity": "error",
+		"target": "token",
+		"reason": "missing",
+		"message": "Authentication token is missing.",
+		"comment": "Thrown when an expected authentication token is missing from the request."
+	},
+
+	"UnknownError": {
+		"code": 500,
+		"severity": "error",
+		"target": "other",
+		"reason": "unknown",
+		"message": "An unknown error occurred.",
+		"comment": "Thrown when an unknown or unexpected error occurs."
+	},
+
+	"ValidationMissingFieldError": {
+		"code": 400,
+		"severity": "error",
+		"target": "validation",
+		"reason": "missing",
+		"message": "Required field is missing.",
+		"comment": "Thrown when a required field is missing during validation."
+	},
+	"ValidationInvalidFormatError": {
+		"code": 400,
+		"severity": "error",
+		"target": "validation",
+		"reason": "format",
+		"message": "Validation format is invalid.",
+		"comment": "Thrown when a value does not match the expected format during validation."
+	},
+	"ValidationConstraintViolationError": {
+		"code": 400,
+		"severity": "error",
+		"target": "validation",
+		"reason": "format",
+		"message": "Validation constraint was violated.",
+		"comment": "Thrown when a value violates a validation constraint (e.g., range, pattern, or rule)."
+	},
+
+	"ValueContainsWhitespaceError": {
+		"code": 400,
+		"severity": "error",
+		"target": "value",
+		"reason": "format",
+		"message": "Value contains whitespace.",
+		"comment": "Thrown when a value contains unexpected whitespace."
+	},
+	"ValueDataTypeError": {
+		"code": 400,
+		"severity": "error",
+		"target": "value",
+		"reason": "type",
+		"message": "Value has the wrong data type.",
+		"comment": "Thrown when a value is of the wrong data type."
+	},
+	"ValueEmptyOrZeroError": {
+		"code": 400,
+		"severity": "error",
+		"target": "value",
+		"reason": "empty",
+		"message": "Value is empty or zero.",
+		"comment": "Thrown when a value is empty or zero, but a valid value is required."
+	},
+	"ValueFormatError": {
+		"code": 400,
+		"severity": "error",
+		"target": "value",
+		"reason": "format",
+		"message": "Value format is invalid.",
+		"comment": "Thrown when a value does not match the expected format."
+	},
+	"ValueOutOfRangeError": {
+		"code": 400,
+		"severity": "error",
+		"target": "value",
+		"reason": "range",
+		"message": "Value is out of range.",
+		"comment": "Thrown when a value is outside the allowed range."
+	},
+	"ValueUnexpectedError": {
+		"code": 400,
+		"severity": "error",
+		"target": "value",
+		"reason": "format",
+		"message": "Unexpected value error.",
+		"comment": "Used to represent unexpected errors related to invalid or improperly formatted values."
+	}
+}

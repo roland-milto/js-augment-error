@@ -1,0 +1,68 @@
+# Make sure this file is compatible with .gitignore
+
+# TypeScript
+src/
+source/
+
+# Node.js dependencies
+node_modules/
+
+# Scripts
+prebuild/
+
+# Documentation
+/docs
+/documentation
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Examples
+/example
+/examples
+/demo
+
+# IDE configuration
+.idea/
+.vscode/
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+cache/
+tmp/
+temporary/
+*.tmp
+*.temp
+
+# Tests
+/coverage
+*.lcov
+/test
+/tests
+/__tests__
+*.spec.*
+*.test.*
+
+# Special files
+.gitignore
+.gitmodules
+.npmignore
+package-lock.json
+
+# Other
+*.tsbuildinfo
+*.map
+Jenkinsfile
+Makefile
