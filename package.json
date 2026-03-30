@@ -1,0 +1,71 @@
+{
+  "author": "Roland Milto (https://roland.milto.de/)",
+  "contributors": [
+    "Roland Milto (https://roland.milto.de/)"
+  ],
+  "homepage": "https://roland.milto.de/projekte/js-augment#error",
+  "name": "@js-augment/error",
+  "version": "2026.3.30",
+  "license": "GPL-3.0-or-later",
+  "description": "@js-augment/errors extends the JavaScript Error object to provide more precise error messages and defines how additional data should be added to the error event. It also makes it easy to create custom error messages.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roland-milto/js-augment-error.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/roland-milto/js-augment-error/issues"
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    },
+    "./register-global": {
+      "types": "./dist/register-global.d.ts",
+      "import": "./dist/register-global.mjs",
+      "default": "./dist/register-global.mjs"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "sideEffects": [
+    "./dist/register-global.mjs"
+  ],
+  "dependencies": {
+    "@js-augment/number": "*",
+    "@type-check/guards": "2026.3.26"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsdown": "^0.21.7",
+    "typescript": "^6.0.2"
+  },
+  "scripts": {
+    "build": "npm run build:cdn && npm run build:npm",
+    "build:cdn": "tsdown --name CDN --clean --dts false --sourcemap false --minify && node -e \"fs.copyFileSync('./dist/index.mjs', './dist/index.min.mjs')\"",
+    "build:npm": "tsdown src/index.ts --name NPM --dts true --sourcemap true --unbundle true --no-clean",
+    "watch": "tsdown --name DEV --unbundle true --no-clean --watch",
+    "prebuild": "node prebuild/index.gen.mjs",
+    "prepublishOnly": "npm run build",
+    "publish": "npm login && npm publish --access public --tag latest"
+  },
+  "tsdown": {
+    "treeshake": false
+  },
+  "jsdelivr": "./dist/index.min.mjs",
+  "unpkg": "./dist/index.min.mjs",
+  "keywords": [
+    "error",
+    "error types",
+    "tree shakable"
+  ]
+}
