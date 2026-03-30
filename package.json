@@ -7,7 +7,7 @@
   "name": "@js-augment/error",
   "version": "2026.3.30",
   "license": "GPL-3.0-or-later",
-  "description": "@js-augment/errors extends the JavaScript Error object to provide more precise error messages and defines how additional data should be added to the error event. It also makes it easy to create custom error messages.",
+  "description": "@js-augment/error extends the JavaScript Error object to provide more precise error messages and defines how additional data should be added to the error event. It also makes it easy to create custom error messages.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/roland-milto/js-augment-error.git"
