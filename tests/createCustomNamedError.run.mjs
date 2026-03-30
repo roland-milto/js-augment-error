@@ -2,7 +2,6 @@
 import {getTypeOf, isString} from "@type-check/guards";
 
 // Import: internal functions.
-// import {createCustomNamedError} from "@js-augment/error";
 import {createCustomNamedError} from "../dist/functions/createCustomNamedError.mjs";
 
 // Create a custom error class.
